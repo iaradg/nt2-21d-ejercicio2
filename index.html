@@ -12,10 +12,32 @@
 
 </head>
 
-
 <div class="container-fluid mt-3" id="app">
-    <input type="text" class="form-control" v-model="criterioDeBusqueda"
-        placeholder="Ingresar un criterio de busqueda...">
+    <input type="text" id="1" class="form-control" v-model="criterioDeBusqueda " or v-model="criterioDeBusqueda1" or  v-model="criterioDeBusqueda2"
+        placeholder="Ingrese su busqueda..." >
+       <!--<input type="number" id="3" class="form-control" v-model="criterioDeBusqueda2"
+       placeholder="Ingrese el dni que desea buscar">-->
+    <div class="alert alert-warning" role="alert" v-if="ingresoCantCharMin.criterio1">
+            Debe ingresar al menos 3 caracteres para realizar la busqueda
+     </div>
+     
+    <!-- <br>
+
+    <input type="text" id="2" class="form-control" v-model="criterioDeBusqueda1"
+         placeholder="Buscar por nombre y apellido..." >
+    
+    <div class="alert alert-warning" role="alert" v-if="ingresoCantCharMin.criterio2" >
+        Debe ingresar al menos 3 caracteres para realizar la busqueda
+      </div>
+    <br>
+
+    <input type="number" id="3" class="form-control" v-model="criterioDeBusqueda2"
+         placeholder="Buscar por Dni..." >
+   
+    <div class="alert alert-warning" role="alert" v-if="ingresoCantCharMin.criterio3">
+        Debe ingresar al menos 3 caracteres para realizar la busqueda
+          </div>
+        -->   
     <br>
     <div class="card-deck m-0">
         <div class="row">
@@ -40,35 +62,197 @@
         el: '#app',
         data: {
             criterioDeBusqueda: '',
+            criterioDeBusqueda1: '',
+            criterioDeBusqueda2: '',
+           
             //Aquí, en este array es donde tienen que agregar su información
             personas: [
                 {
                     nombre: "Daniel",
-                    apellido: "Sanchez",
+                    apellido: "Sánchez",
                     correo: "danielsanchez68@hotmail.com",
                     dni: "20442873"
                 },
-                {
-                    nombre: "...",
-                    apellido: "...",
-                    correo: "...",
-                    dni: "..."
-                },
-            ]
+                    {
+                    nombre: "Felton",
+                    apellido: "Abernathy",
+                    correo: "Meaghan35@gmail.com",
+                    dni: "58332479",
+                    id: "1"
+                    },
+                    {
+                    nombre: "Sarah",
+                    apellido: "Thiel",
+                    correo: "Florian_Haag@hotmail.com",
+                    dni: "387786697",
+                    id: "2"
+                    },
+                    {
+                    nombre: "Alanna",
+                    apellido: "Rosenbaum",
+                    correo: "Kaleigh.Hilpert50@yahoo.com",
+                    dni: "55615259",
+                    id: "3"
+                    },
+                    {
+                    nombre: "Jakob",
+                    apellido: "Kreiger",
+                    correo: "Jarrell7@gmail.com",
+                    dni: "29103362",
+                    id: "4"
+                    },
+                    {
+                    nombre: "Joan",
+                    apellido: "Grant",
+                    correo: "Casimir42@hotmail.com",
+                    dni: "97643544",
+                    id: "5"
+                    },
+                    {
+                    nombre: "Margarete",
+                    apellido: "Nolan",
+                    correo: "Stephan.Heller24@hotmail.com",
+                    dni: "802050071",
+                    id: "6"
+                    },
+                    {
+                    nombre: "Lyric",
+                    apellido: "Mitchell",
+                    correo: "Jensen59@hotmail.com",
+                    dni: "1389149",
+                    id: "7"
+                    },
+                    {
+                    nombre: "Georgette",
+                    apellido: "Hauck",
+                    correo: "Nyasia.Reynolds29@gmail.com",
+                    dni: "369874836",
+                    id: "8"
+                    },
+                    {
+                    nombre: "Miguel",
+                    apellido: "Auer",
+                    correo: "Tomas9@gmail.com",
+                    dni: "5719005",
+                    id: "9"
+                    },
+                    {
+                    nombre: "Kavon",
+                    apellido: "Kautzer",
+                    correo: "Carley.Pouros25@yahoo.com",
+                    dni: "528746249",
+                    id: "10"
+                    },
+                    {
+                    nombre: "Reanna",
+                    apellido: "Gutkowski",
+                    correo: "Obie89@gmail.com",
+                    dni: "6237083",
+                    id: "11"
+                    },
+                    {
+                    nombre: "Thaddeus",
+                    apellido: "Rath",
+                    correo: "Dominic.Rippin54@hotmail.com",
+                    dni: "81055535",
+                    id: "12"
+                    },
+                    {
+                    nombre: "Timmy",
+                    apellido: "Bernhard",
+                    correo: "Willy_Hudson@yahoo.com",
+                    dni: "6562567841",
+                    id: "13"
+                    },
+                    {
+                    nombre: "Mohamed",
+                    apellido: "Bins",
+                    correo: "Vida.Herman83@hotmail.com",
+                    dni: "855608105",
+                    id: "14"
+                    },
+                    {
+                    nombre: "Theresia",
+                    apellido: "Hills",
+                    correo: "Xander_Dooley@gmail.com",
+                    dni: "276830320",
+                    id: "15"
+                    },
+                    {
+                    nombre: "Willie",
+                    apellido: "O'Keefe",
+                    correo: "Brown2@hotmail.com",
+                    dni: "97871133",
+                    id: "16"
+                    },
+                    {
+                    nombre: "Esther",
+                    apellido: "Cormier",
+                    correo: "Charlie.Waelchi@yahoo.com",
+                    dni: "343516510",
+                    id: "17"
+                    },
+                    {
+                    nombre: "Marquis",
+                    apellido: "Macejkovic",
+                    correo: "Jimmie.Larkin8@gmail.com",
+                    dni: "19093115",
+                    id: "18"
+                    },
+                    {
+                    nombre: "Dasia",
+                    apellido: "Gibson",
+                    correo: "Jalen_Altenwerth@hotmail.com",
+                    dni: "1835140119",
+                    id: "19"
+                    },
+                    {
+                    nombre: "Abe",
+                    apellido: "Leuschke",
+                    correo: "Mariano.Klein@hotmail.com",
+                    dni: "13144110696",
+                    id: "20"
+                    }
 
+                                ]
         },
         computed: {
             personasFiltradas() {
+                if((this.criterioDeBusqueda.length >= 3) || (this.criterioDeBusqueda1.length >= 3 ) ||
+                    (this.criterioDeBusqueda2.length >= 3 )){
                 return this.personas.filter((persona) => {
                     let registroCompleto = `${persona.nombre} ${persona.apellido} ${persona.dni} ${persona.correo}`
+                    let registroNOMyAPE = `${persona.nombre} ${persona.apellido} `
+                    let registroDNI = ` ${persona.dni}`
                     return registroCompleto.toLowerCase().includes(this.criterioDeBusqueda.toLowerCase())
+                        && registroNOMyAPE.toLowerCase().includes(this.criterioDeBusqueda1.toLowerCase()) 
+                        && registroDNI.toLowerCase().includes(this.criterioDeBusqueda2.toLowerCase())                   
                 });
+            }else{return this.personas}
+            },
+            ingresoCantCharMin(){
+                console.log(this.criterioDeBusqueda.length)
+                return {
+                    criterio1 : this.criterioDeBusqueda.length < 3  && this.criterioDeBusqueda.length >0,
+                    criterio2 : this.criterioDeBusqueda1.length < 3  && this.criterioDeBusqueda1.length >0,
+                    criterio3 : this.criterioDeBusqueda2.length < 3  && this.criterioDeBusqueda2.length >0,
+                }      
             }
         },
         methods: {
             getNombreCompleto(persona) {
                 return `${persona.nombre} ${persona.apellido}`
+            },
+
+            getCantChar(crit){
+                let a =crit.split("")
+                let cant= 0
+                a.forEach(a => {
+                    cant++
+                });
+                return cant
             }
+
         }
     });
 </script>
